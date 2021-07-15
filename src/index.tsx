@@ -40,7 +40,6 @@ export default function usePositionning(
   },
   deps: Parameters<typeof useEffect>[1] = []
 ): UsePositionningHook {
-  console.log(space)
   //get dimension fo parent and children
   const [nodeParent, _setNodeParent] = useState<HTMLElement>()
   const refParent = useRef(nodeParent)
@@ -196,7 +195,6 @@ export default function usePositionning(
           left >= (childrenRect.width - parentRect.width) / 2 &&
           right >= (childrenRect.width - parentRect.width) / 2
         ) {
-          console.log(`top : ${space}`)
           return true
         }
         return false
@@ -466,6 +464,9 @@ export default function usePositionning(
     }
   }, [refParent, space])
 
+  useEffect(() => {
+    findBestPosition(space)
+  }, [space])
   // listen every resize of the element to position
   useLayoutEffect(() => {
     if (refParent) {
