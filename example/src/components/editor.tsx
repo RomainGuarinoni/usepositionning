@@ -37,10 +37,38 @@ export default function Editor() {
             <span className='white'>,</span>
             <p className='const'> actualPosition</p>
             <span className='white'> ] = </span>
-            <p className='function'>usePositionning</p>
-            <p className='white'>( {'{ }'} )</p>
           </p>
         </div>
+        <div className={style.line}>
+          <p className='function space'>
+            usePositionning <span className='white'>({'{'}</span>{' '}
+          </p>
+        </div>
+        <div className={style.line}>
+          <p className='var space2'>
+            space: <span className='number'>0</span>
+            <span className='white'> ,</span>{' '}
+          </p>
+        </div>
+
+        <div className={style.line}>
+          <p className='var space2'>
+            preferences: <span className='white'>[ ]</span>
+            <span className='white'> ,</span>{' '}
+          </p>
+        </div>
+
+        <div className={style.line}>
+          <p className='var space2'>
+            strictMode: <span className='darkConst'>false</span>
+            <span className='white'> ,</span>{' '}
+          </p>
+        </div>
+
+        <div className={style.line}>
+          <p className='white space'>{'}'} )</p>
+        </div>
+
         <br />
         <div className={style.line}>
           <p className='import space'>

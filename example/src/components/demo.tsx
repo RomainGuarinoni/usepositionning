@@ -5,7 +5,11 @@ export default function Demo() {
   const rootRef = useRef<HTMLDivElement>(null)
 
   const [refParent, refChildren, styleChildren, actualPosition] =
-    usePositionning({})
+    usePositionning({
+      space: 0,
+      preferences: [],
+      strictMode: false
+    })
 
   useEffect(() => {
     rootRef?.current?.scroll(900, 300)
