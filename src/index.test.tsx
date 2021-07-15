@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import usePositionning from '.'
 
 describe('ExampleComponent', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(usePositionning).toBeTruthy()
   })
 })

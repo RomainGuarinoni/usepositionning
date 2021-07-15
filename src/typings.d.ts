@@ -1,17 +1,21 @@
-/**
- * Default CSS definition for typescript,
- * will be overridden with file-specific definitions by rollup
- */
-declare module '*.css' {
-  const content: { [className: string]: string };
-  export default content;
+import { EVERY_POSITIONS } from './index'
+
+export type AbsolutePosition = {
+  top: AbsolutePositionValue
+  left: AbsolutePositionValue
+  right: AbsolutePositionValue
+  bottom: AbsolutePositionValue
+  position: 'absolute'
+  display?: 'none'
 }
 
-interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
+export type AbsolutePositionValue = number | 'unset'
 
-declare module '*.svg' {
-  const svgUrl: string;
-  const svgComponent: SvgrComponent;
-  export default svgUrl;
-  export { svgComponent as ReactComponent }
-}
+export type PositionPreferences = typeof EVERY_POSITIONS[number]
+
+export type UsePositionningHook = [
+  (node: HTMLElement) => void,
+  (node: HTMLElement) => void,
+  AbsolutePosition,
+  PositionPreferences | undefined
+]
