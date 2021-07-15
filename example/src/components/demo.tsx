@@ -11,13 +11,13 @@ export default function Demo({
   strictMode: boolean
 }): JSX.Element {
   const rootRef = useRef<HTMLDivElement>(null)
+
   const [refParent, refChildren, styleChildren, actualPosition] =
     usePositionning({
       space: space,
       preferences: preferences,
       strictMode: strictMode
     })
-
   useEffect(() => {
     rootRef?.current?.scroll(900, 200)
   }, [])

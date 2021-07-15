@@ -77,7 +77,7 @@ export default function Editor({
 
         <div className={style.line}>
           <p className='var space2'>
-            strictMode: <span className='darkConst'> {strictMode} </span>
+            strictMode: <span className='darkConst'> {`${strictMode}`} </span>
             <span className='white'> ,</span>{' '}
           </p>
         </div>

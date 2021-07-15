@@ -31,7 +31,7 @@ export default function Control({
         id='strictMode'
         value={`${strictMode}`}
         onChange={(e) => {
-          setStrictMode(JSON.parse(e.target.value))
+          setStrictMode(e.target.value === 'false' ? false : true)
         }}
       >
         <option value='false'>false</option>
