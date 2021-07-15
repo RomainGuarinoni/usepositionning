@@ -55,7 +55,7 @@ export default function usePositionning(
   const refChildren = useRef(nodeChildren)
   const setNodeChildrenFunction = (node: HTMLElement) => {
     refChildren.current = node
-    _setNodeParent(node)
+    _setNodeChildren(node)
   }
   const setNodeChildren = useCallback((node) => {
     setNodeChildrenFunction(node)

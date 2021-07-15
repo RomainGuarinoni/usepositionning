@@ -14,7 +14,9 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -45,4 +47,19 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <style>
+    body{
+      font-family: 'Roboto', sans-serif;
+      padding : 0;
+      margin : 0;
+      --var:#97dbfc;
+      --const : #1b3182;
+      --component : #32c39f;
+      --theme:#1e1e1e;
+      --import : #9d73ad;
+      --function : #cad181;
+      --bracket : #7c8079;
+      --string : #843423;
+    }
+  </style>
 </html>
