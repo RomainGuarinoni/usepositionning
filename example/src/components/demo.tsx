@@ -1,18 +1,25 @@
 import React, { useEffect, useRef } from 'react'
 import style from '../css/demo.module.css'
 import usePositionning from 'usepositionning'
-export default function Demo() {
+export default function Demo({
+  space,
+  preferences,
+  strictMode
+}: {
+  space: number
+  preferences: Array<string>
+  strictMode: boolean
+}): JSX.Element {
   const rootRef = useRef<HTMLDivElement>(null)
-
   const [refParent, refChildren, styleChildren, actualPosition] =
     usePositionning({
-      space: 0,
-      preferences: [],
-      strictMode: false
+      space: space,
+      preferences: preferences,
+      strictMode: strictMode
     })
 
   useEffect(() => {
-    rootRef?.current?.scroll(900, 300)
+    rootRef?.current?.scroll(900, 200)
   }, [])
   return (
     <div className={style.root} ref={rootRef}>

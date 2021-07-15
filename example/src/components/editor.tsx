@@ -1,6 +1,14 @@
 import React from 'react'
 import style from '../css/editor.module.css'
-export default function Editor() {
+export default function Editor({
+  space,
+  preferences,
+  strictMode
+}: {
+  space: number
+  preferences: Array<string>
+  strictMode: boolean
+}): JSX.Element {
   return (
     <div className={style.root}>
       <div className={style.editorWindow}>
@@ -46,21 +54,30 @@ export default function Editor() {
         </div>
         <div className={style.line}>
           <p className='var space2'>
-            space: <span className='number'>0</span>
+            space: <span className='number'> {space} </span>
             <span className='white'> ,</span>{' '}
           </p>
         </div>
 
         <div className={style.line}>
           <p className='var space2'>
-            preferences: <span className='white'>[ ]</span>
+            preferences:{' '}
+            <span className='white'>
+              [{' '}
+              {preferences.map((position, index) => {
+                return ` ${position}${
+                  index !== preferences.length - 1 ? ' ,' : ''
+                } `
+              })}{' '}
+              ]
+            </span>
             <span className='white'> ,</span>{' '}
           </p>
         </div>
 
         <div className={style.line}>
           <p className='var space2'>
-            strictMode: <span className='darkConst'>false</span>
+            strictMode: <span className='darkConst'> {strictMode} </span>
             <span className='white'> ,</span>{' '}
           </p>
         </div>

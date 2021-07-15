@@ -19,9 +19,16 @@
   width: 100%;
   padding: 0 50px;
   height: 200px;
-  background: red;
+  border-radius: 10px;
   display: flex;
   color: white;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
   flex-direction: column;
   align-items: center;
   justify-content: center;
