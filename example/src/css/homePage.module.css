@@ -6,10 +6,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-}
-.header h1 {
-  margin-left: 50px;
+  justify-content: space-between;
+  padding: 0 100px;
 }
 
 .demo {
@@ -25,4 +23,28 @@
   width: 800px;
   height: 600px;
   margin: 20px 0;
+}
+.brandIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 30px;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: all ease 200ms;
+  color: black;
+}
+.icon:hover {
+  transform: translateY(-5px);
+}
+.npm {
+  color: #c53635;
+}
+a {
+  color: inherit !important;
+  background: unset;
+  text-decoration: none;
 }

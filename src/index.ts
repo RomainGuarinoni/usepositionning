@@ -467,7 +467,7 @@ export default function usePositionning(
         true
       )
     }
-  }, [refParent, space, strictMode, preferences])
+  }, [refParent])
 
   useEffect(() => {
     findBestPosition(space, strictMode, preferences)
@@ -479,5 +479,6 @@ export default function usePositionning(
     }
   }, [...deps])
 
+  console.log('coucou')
   return [setNodeParent, setNodeChildren, position, actualPosition]
 }
