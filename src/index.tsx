@@ -89,8 +89,14 @@ export default function usePositionning(
       : getScrollParent(node.parentNode)
 
   // update the css property when the user scroll
-  function findBestPosition(space: number) {
+  function findBestPosition(
+    space: number,
+    strictMode: boolean,
+    preferences: Array<PositionPreferences>
+  ) {
     space = space
+    strictMode = strictMode
+    preferences = preferences
     window.requestAnimationFrame(() => {
       if (refParent.current !== null && refChildren.current !== null) {
         //return an error if the parent node is not in relative position
@@ -150,7 +156,6 @@ export default function usePositionning(
             break
           }
         }
-
         // find a  position if the preference are empty or if none of the preference item is available
         if (!positionHasBeenSet && !strictMode) {
           for (const positionItem of EVERY_POSITIONS) {
@@ -435,14 +440,14 @@ export default function usePositionning(
     window.addEventListener(
       'scroll',
       () => {
-        findBestPosition(space)
+        findBestPosition(space, strictMode, preferences)
       },
       true
     )
     window.addEventListener(
       'resize',
       () => {
-        findBestPosition(space)
+        findBestPosition(space, strictMode, preferences)
       },
       true
     )
@@ -450,27 +455,27 @@ export default function usePositionning(
       window.removeEventListener(
         'scroll',
         () => {
-          findBestPosition(space)
+          findBestPosition(space, strictMode, preferences)
         },
         true
       )
       window.removeEventListener(
         'resize',
         () => {
-          findBestPosition(space)
+          findBestPosition(space, strictMode, preferences)
         },
         true
       )
     }
-  }, [refParent, space])
+  }, [refParent, space, strictMode, preferences])
 
   useEffect(() => {
-    findBestPosition(space)
-  }, [space])
+    findBestPosition(space, strictMode, preferences)
+  }, [space, strictMode, preferences])
   // listen every resize of the element to position
   useLayoutEffect(() => {
     if (refParent) {
-      findBestPosition(space)
+      findBestPosition(space, strictMode, preferences)
     }
   }, [...deps])
 

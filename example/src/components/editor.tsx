@@ -37,6 +37,20 @@ export default function Editor({
           <p className='darkConst space'>const</p>
           <p className='const'>
             {' '}
+            <span className='white'>[ </span>open{' '}
+            <span className='white'>,</span>
+            <span className='function'> setOpen</span>{' '}
+            <span className='white'> ] = </span>
+            <span className='function'>useState</span>
+            <span className='white'>( </span>
+            <span className='const'>false</span>
+            <span className='white'> ) ; </span>
+          </p>
+        </div>
+        <div className={style.line}>
+          <p className='darkConst space'>const</p>
+          <p className='const'>
+            {' '}
             <span className='white'>[ </span>parentRef{' '}
             <span className='white'>,</span>
             <span className='const'> refChildren</span>{' '}
@@ -47,20 +61,21 @@ export default function Editor({
             <span className='white'> ] = </span>
           </p>
         </div>
+
         <div className={style.line}>
-          <p className='function space'>
+          <p className='function space2'>
             usePositionning <span className='white'>({'{'}</span>{' '}
           </p>
         </div>
         <div className={style.line}>
-          <p className='var space2'>
+          <p className='var space3'>
             space: <span className='number'> {space} </span>
             <span className='white'> ,</span>{' '}
           </p>
         </div>
 
         <div className={style.line}>
-          <p className='var space2'>
+          <p className='var space3'>
             preferences:{' '}
             <span className='white'>
               [{' '}
@@ -76,14 +91,14 @@ export default function Editor({
         </div>
 
         <div className={style.line}>
-          <p className='var space2'>
+          <p className='var space3'>
             strictMode: <span className='darkConst'> {`${strictMode}`} </span>
             <span className='white'> ,</span>{' '}
           </p>
         </div>
 
         <div className={style.line}>
-          <p className='white space'>{'}'} )</p>
+          <p className='white space2'>{'}'} ) ;</p>
         </div>
 
         <br />
@@ -116,7 +131,15 @@ export default function Editor({
           </p>
         </div>
         <div className={style.line}>
-          <p className='darkConst space3'>
+          <p className='const space3'>
+            <span className='darkConst'>{'{ '}</span>
+            open
+            <span className='white'> {' && ( '}</span>
+          </p>
+        </div>
+
+        <div className={style.line}>
+          <p className='darkConst space4'>
             {' '}
             <span className='bracket'>{'<'}</span>div
           </p>
@@ -136,7 +159,7 @@ export default function Editor({
           </p>
         </div>
         <div className={style.line}>
-          <p className='darkConst space4'>
+          <p className='darkConst space5'>
             {' '}
             <span className='bracket'>{'<'}</span>p
             <span className='bracket'>{'>'}</span>
@@ -146,7 +169,7 @@ export default function Editor({
           </p>
         </div>
         <div className={style.line}>
-          <p className='darkConst space4'>
+          <p className='darkConst space5'>
             {' '}
             <span className='bracket'>{'<'}</span>p
             <span className='bracket'>{'>'}</span>
@@ -159,10 +182,17 @@ export default function Editor({
           </p>
         </div>
         <div className={style.line}>
-          <span className='bracket space3'>{'</'}</span>
+          <span className='bracket space4'>{'</'}</span>
           <span className='darkConst'>div</span>
           <span className='bracket'>{'>'}</span>
         </div>
+        <div className={style.line}>
+          <p className='darkConst space3'>
+            <span className='white'>) </span>
+            {'}'}
+          </p>
+        </div>
+
         <div className={style.line}>
           <span className='bracket space2'>{'</'}</span>
           <span className='darkConst'>div</span>
