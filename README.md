@@ -2,7 +2,7 @@
 
 > A lightweight library to position elements on the page according to scrolling and available space.
 
-[![NPM](https://img.shields.io/npm/v/usepositionning.svg)](https://www.npmjs.com/package/usepositionning) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://romainguarinoni.github.io/usePositionning/)[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/RomainGuarinoni/usePositionning/blob/master/LICENSE)
+[![NPM](https://img.shields.io/npm/v/usepositionning.svg)](https://www.npmjs.com/package/usepositionning) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://romainguarinoni.github.io/usePositionning/) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/RomainGuarinoni/usePositionning/blob/master/LICENSE)
 
 ![Peek 17-07-2021 00-57](https://user-images.githubusercontent.com/72984755/126016048-05498cf9-145a-49eb-a56e-75fed22300ff.gif)
 
