@@ -9,6 +9,9 @@
   "module": "dist/index.modern.js",
   "source": "src/index.ts",
   "homepage": "https://romainguarinoni.github.io/usePositionning/",
+  "publishConfig": {
+    "registry": "https://www.npmjs.com/package/usepositionning"
+  },
   "engines": {
     "node": ">=10"
   },
