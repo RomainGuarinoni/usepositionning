@@ -39,11 +39,11 @@ export default function Editor({
             {' '}
             <span className='white'>[ </span>parentRef{' '}
             <span className='white'>,</span>
-            <p className='const'> refChildren</p>{' '}
+            <span className='const'> refChildren</span>{' '}
             <span className='white'>,</span>
-            <p className='const'> styleChildren</p>
+            <span className='const'> styleChildren</span>
             <span className='white'>,</span>
-            <p className='const'> actualPosition</p>
+            <span className='const'> actualPosition</span>
             <span className='white'> ] = </span>
           </p>
         </div>

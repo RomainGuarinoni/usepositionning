@@ -20,7 +20,7 @@ export default function Control({
   return (
     <div className={style.root}>
       <input
-        type='number'
+        type='range'
         value={space}
         onChange={(e) => {
           setSpace(parseInt(e.target.value))
@@ -44,8 +44,10 @@ export default function Control({
         value={preferences}
         multiple
       >
-        {EVERY_POSITIONS.map((position) => (
-          <option value={position}>position</option>
+        {EVERY_POSITIONS.map((position, index) => (
+          <option key={`position-${index}`} value={position}>
+            position
+          </option>
         ))}
       </select>
     </div>
