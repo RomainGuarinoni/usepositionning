@@ -1,0 +1,28 @@
+.root {
+  border: 2px solid rgba(0, 0, 0, 0.363);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.root p {
+  margin: 0;
+}
+
+.select {
+  background: rgba(0, 0, 0, 0.171);
+  height: 100%;
+  width: 55%;
+  border-radius: 20px;
+  position: absolute;
+  transition: all ease 200ms;
+  left: 0;
+}
+.right {
+  transform: translateX(52px);
+}

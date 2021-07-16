@@ -22,7 +22,7 @@ export default function Demo({
       [open]
     )
   useEffect(() => {
-    rootRef?.current?.scroll(900, 200)
+    rootRef?.current?.scroll(900, 450)
   }, [])
   return (
     <div className={style.root} ref={rootRef}>

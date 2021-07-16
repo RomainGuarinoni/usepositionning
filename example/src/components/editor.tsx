@@ -80,9 +80,16 @@ export default function Editor({
             <span className='white'>
               [{' '}
               {preferences.map((position, index) => {
-                return ` ${position}${
-                  index !== preferences.length - 1 ? ' ,' : ''
-                } `
+                return (
+                  <span className='string'>
+                    {position}
+                    {index !== preferences.length - 1 ? (
+                      <span className='white'> , </span>
+                    ) : (
+                      ''
+                    )}
+                  </span>
+                )
               })}{' '}
               ]
             </span>
