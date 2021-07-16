@@ -28,6 +28,7 @@ export const EVERY_POSITIONS = [
   'bottom-right',
   'none'
 ] as const
+
 export default function usePositionning(
   {
     preferences = [],
@@ -120,7 +121,7 @@ export default function usePositionning(
             bottom: 0,
             right: 0,
             width: 0,
-            height: 0
+            height: 50
           } as DOMRect)
         const childrenRect =
           refChildren?.current?.getBoundingClientRect() ||
@@ -130,7 +131,7 @@ export default function usePositionning(
             bottom: 0,
             right: 0,
             width: 0,
-            height: 0
+            height: 50
           } as DOMRect)
         const left = parentRect.left - container.left
         const top = parentRect.top - container.top
@@ -138,7 +139,7 @@ export default function usePositionning(
         const bottom = container.height - (top + parentRect.height)
         let positionHasBeenSet = false
         // find the best position in the preference array in params and update css
-        for (const positionItem of preferences) {
+        for (const positionItem of preferences || []) {
           if (
             isPositionAvailable(
               positionItem,
@@ -430,11 +431,10 @@ export default function usePositionning(
           right: 'unset',
           bottom: 'unset',
           position: 'absolute',
-          display: 'none'
+          opacity: 0
         })
     }
   }
-
   // listen every scroll/resize on the window and update CSS position
   useEffect(() => {
     window.addEventListener(
@@ -467,7 +467,7 @@ export default function usePositionning(
         true
       )
     }
-  }, [refParent])
+  }, [refParent, space, strictMode, preferences])
 
   useEffect(() => {
     findBestPosition(space, strictMode, preferences)
@@ -479,6 +479,5 @@ export default function usePositionning(
     }
   }, [...deps])
 
-  console.log('coucou')
   return [setNodeParent, setNodeChildren, position, actualPosition]
 }

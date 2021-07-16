@@ -1,4 +1,4 @@
-import usePositionning from './index'
+import usePositionning from '.'
 
 describe('ExampleComponent', () => {
   it('is truthy', () => {

@@ -7,6 +7,7 @@ export type AbsolutePosition = {
   bottom: AbsolutePositionValue
   position: 'absolute'
   display?: 'none'
+  opacity?: 0 | 1
 }
 
 export type AbsolutePositionValue = number | 'unset'
