@@ -1,17 +1,16 @@
 {
-  "name": "usepositionning",
+  "name": "@romainguarinoni/usepositionning",
   "version": "1.2.3",
   "description": "A lightweight library to position elements on the page according to scrolling and available space.",
   "author": "RomainGuarinoni",
   "license": "MIT",
-  "repository": "RomainGuarinoni/usePositionning",
+  "repository":{
+    "url" : "git://github.com/RomainGuarinoni/usepositionning.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.ts",
   "homepage": "https://romainguarinoni.github.io/usePositionning/",
-  "publishConfig": {
-    "registry": "https://www.npmjs.com/package/usepositionning"
-  },
   "engines": {
     "node": ">=10"
   },
