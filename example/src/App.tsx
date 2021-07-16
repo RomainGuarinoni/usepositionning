@@ -22,7 +22,11 @@ const App = (): JSX.Element => {
           >
             <FontAwesomeIcon className={style.icon} icon={faGithub} />
           </a>
-          <a href='#'>
+          <a
+            href='https://www.npmjs.com/package/usepositionning'
+            rel='noopener noreferrer'
+            target='_blank'
+          >
             <FontAwesomeIcon
               className={`${style.icon} ${style.npm}`}
               icon={faNpm}
