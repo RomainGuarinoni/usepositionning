@@ -10,7 +10,7 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.ts",
-  "homepage": "https://romainguarinoni.github.io/usePositionning/",
+  "homepage": "https://romainguarinoni.github.io/usepositionning/",
   "engines": {
     "node": ">=10"
   },
